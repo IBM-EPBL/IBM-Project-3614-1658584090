@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+    {% block body %}
+        <div class="container">
+            <div class="jumbotron">
+                <div class="row" style="color: black;">
+                    <div class="col">
+                        <h2>{{ ticket[5] }}</h2>
+                        <p>{{ ticket[6] }}</p>
+                    </div>
+                    <div class="col">
+                        <div class="row detail-card bl">
+                            <h4>Complaint Filed by {{ ticket[2] }}</h4>
+                        </div>
+                        <div class="row detail-card gr">
+                            <h4>Progress: {{ ticket[7] }}</h4>
+                        </div>
+                        <div class="row detail-card yl">
+                            <h4>Assigned to {{ ticket[4] }}</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                {% if user[4] == 2 %}
+    
+                <div class="row detail-card">
+                    <form method="POST">
+                        <select name="agent" style="color: black;">
+                            {% for user in all_users %}
+                                <option value="{{user[0]}}">{{user[1]}}</option>
+                            {% endfor %}
+                        </select>
+                        <input class="btn btn-danger btn-sm" type="submit" value="Assign"/>
+                    </form>
+                </div>
+        
+                {% elif user[4] == 1 %}
+                    {% if ticket[7] == "assigned" %}
+                        <a href="/accept/{{ticket[0]}}/{{user[0]}}"><button class="btn btn-secondary" style="background-color: #4CAF50; color: white;">Accept</button></a>
+                    {% elif ticket[7] == "accepted" %}
+                        <a href="/delete/{{ticket[0]}}/{{user[0]}}"><button class="btn btn-danger" style="background-color: red; color: white;">Delete</button></a>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        
+    {% endblock %}
