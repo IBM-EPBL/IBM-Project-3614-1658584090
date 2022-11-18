@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <title>Customer Care Registry</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/img/favicon-16x16.png">
+    <link rel="manifest" href="../static/img/site.webmanifest">
+</head>
+<body>
+	<header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="pull-left visible-md visible-lg">
+            <div id="logo-img">
+              <img src="../static/img/logo-small.png">
+            </div>
+          </a>
+
+          <div class="navbar-brand">
+            <h1>Customer Care Registry</h1>
+          </div>
+
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li>
+              <a href="/">
+                <span class="glyphicon glyphicon-home"></span><br class="hidden-xs"> Home</a>
+            </li>
+            <li>
+              <a href="home">
+                <span class="glyphicon glyphicon-dashboard"></span><br class="hidden-xs"> Dashboard</a>
+            </li>
+            <li>
+              <a href="login">
+                <span class="glyphicon glyphicon-log-in"></span><br class="hidden-xs"> Login</a>
+            </li>
+            <li>
+              <a href="register">
+                <span class="glyphicon glyphicon-new-window"></span><br class="hidden-xs"> Register</a>
+            </li>
+            <li>
+              <a href="admin">
+                <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> Admin</a>
+            </li>
+            <li>
+              <a href="agent">
+                <span class="glyphicon glyphicon-plus"></span><br class="hidden-xs"> Agent</a>
+            </li>
+            
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+
+  <div>
+        	{% block body %}
+    		{% endblock %}
+    	</div>
+
+        
+    <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          24x7 available...<br>
+          Except Government Holidays.
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          1013, 24th Main Rd, Siddanna Layout, Banashankari Stage II, Banashankari, Bengaluru, Karnataka 560070
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>“It takes months to find a customer… seconds to lose one.” </p>
+          <p>“The customer is why we are here. If we take good care of them, they’ll give us good reason to come back.”</p>
+        </section>
+      </div>
+      <div class="text-center">&copy; Copyright Customer Care Registry 2021</div>
+    </div>
+  </footer>
+    <script src="../static/js/jquery-3.5.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
